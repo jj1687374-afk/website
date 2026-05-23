@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bhabi Lal Gold House — Columbus's Premier Nepali Goldsmith</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Source+Serif+4:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --black: #080808;
+  --near-black: #111111;
+  --dark: #1A1A1A;
+  --card-bg: #161616;
+  --gold: #C9A227;
+  --gold-light: #E8C84A;
+  --gold-pale: #F5E49A;
+  --gold-dim: rgba(201,162,39,0.18);
+  --gold-border: rgba(201,162,39,0.3);
+  --cream: #F5EFE0;
+  --text: #EAE3D2;
+  --text-mid: #B0A080;
+  --text-dim: #7A6E58;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--black);
+  color: var(--text);
+  font-family: 'Source Serif 4', Georgia, serif;
+  font-size: 18px;
+  line-height: 1.75;
+  overflow-x: hidden;
+}
+
+/* ── MASTHEAD ── */
+.masthead {
+  border-bottom: 1px solid var(--gold-border);
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--near-black);
+  position: sticky; top: 0; z-index: 100;
+}
+
+.masthead-pub {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 500;
+}
+
+.masthead-date {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.15em;
+  color: var(--text-dim);
+  font-weight: 300;
+}
+
+.masthead-nav {
+  display: flex; gap: 1.5rem; list-style: none;
+}
+.masthead-nav a {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-mid);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.masthead-nav a:hover { color: var(--gold); }
+
+/* ── HERO ── */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 0 0 4rem;
+  overflow: hidden;
+  background: var(--black);
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 60% 40%, rgba(201,162,39,0.09) 0%, transparent 65%),
+    radial-gradient(ellipse at 20% 80%, rgba(201,162,39,0.05) 0%, transparent 50%);
+}
+
+/* Big decorative letter */
+.hero-deco {
+  position: absolute;
+  top: -0.1em; right: -0.05em;
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(18rem, 35vw, 30rem);
+  font-weight: 900;
+  color: rgba(201,162,39,0.04);
+  line-height: 1;
+  pointer-events: none;
+  user-select: none;
+  letter-spacing: -0.05em;
+}
+
+.hero-inner {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  width: 100%;
+}
+
+.hero-tag {
+  display: inline-block;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--gold);
+  border: 1px solid var(--gold-border);
+  padding: 0.35rem 1rem;
+  margin-bottom: 2rem;
+  animation: fadeIn 1s ease both;
+}
+
+.hero-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.8rem, 8vw, 6rem);
+  font-weight: 900;
+  line-height: 1.0;
+  color: var(--cream);
+  margin-bottom: 1.5rem;
+  animation: fadeIn 1s 0.15s ease both;
+}
+
+.hero-title span { color: var(--gold); }
+
+.hero-deck {
+  font-family: 'Source Serif 4', serif;
+  font-size: clamp(1.1rem, 2vw, 1.35rem);
+  font-weight: 300;
+  font-style: italic;
+  color: var(--text-mid);
+  max-width: 560px;
+  margin-bottom: 2.5rem;
+  line-height: 1.6;
+  animation: fadeIn 1s 0.3s ease both;
+}
+
+.hero-byline {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  color: var(--text-dim);
+  animation: fadeIn 1s 0.45s ease both;
+}
+
+.hero-byline strong { color: var(--gold-light); font-weight: 500; }
+
+.byline-dot {
+  width: 3px; height: 3px;
+  border-radius: 50%;
+  background: var(--gold-border);
+}
+
+.hero-scroll {
+  margin-top: 3rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.6rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  animation: bounce 2.5s 1.5s infinite;
+}
+
+.hero-line {
+  width: 40px; height: 1px;
+  background: var(--gold-border);
+}
+
+/* ── GOLD RULE ── */
+.gold-rule {
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  max-width: 200px;
+  margin: 0 auto;
+}
+
+/* ── ARTICLE LAYOUT ── */
+.article {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+}
+
+.drop-cap::first-letter {
+  font-family: 'Playfair Display', serif;
+  font-size: 5.5em;
+  font-weight: 900;
+  color: var(--gold);
+  float: left;
+  line-height: 0.72;
+  margin: 0.1em 0.12em 0 0;
+}
+
+p + p { margin-top: 1.25rem; }
+
+.article-img {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  display: block;
+}
+
+/* Image placeholder */
+.img-placeholder {
+  width: 100%;
+  background: var(--card-bg);
+  border: 1px dashed var(--gold-border);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  color: var(--text-dim);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  position: relative;
+  overflow: hidden;
+}
+
+.img-placeholder::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 10px,
+    rgba(201,162,39,0.03) 10px,
+    rgba(201,162,39,0.03) 20px
+  );
+}
+
+.img-placeholder-icon {
+  font-size: 2rem;
+  opacity: 0.4;
+}
+
+.img-placeholder-label {
+  text-align: center;
+  line-height: 1.5;
+  max-width: 280px;
+  position: relative;
+}
+
+.img-placeholder-label strong {
+  display: block;
+  color: var(--gold);
+  font-size: 0.8rem;
+  margin-bottom: 0.25rem;
+}
+
+/* Full-width image block */
+.img-block {
+  margin: 3rem 0;
+}
+
+.img-block-wide {
+  margin: 3rem -4rem;
+}
+
+.img-caption {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  color: var(--text-dim);
+  padding: 0.6rem 0 0;
+  border-top: 1px solid var(--gold-border);
+  margin-top: 0.5rem;
+}
+
+/* ── PULL QUOTE ── */
+.pull-quote {
+  border-left: 3px solid var(--gold);
+  padding: 1.5rem 2rem;
+  margin: 3rem 0;
+  background: var(--gold-dim);
+}
+
+.pull-quote p {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.3rem, 3vw, 1.8rem);
+  font-style: italic;
+  color: var(--gold-light);
+  line-height: 1.4;
+  margin: 0;
+}
+
+.pull-quote cite {
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.68rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  margin-top: 1rem;
+  font-style: normal;
+}
+
+/* ── FACT BOX ── */
+.fact-box {
+  background: var(--card-bg);
+  border: 1px solid var(--gold-border);
+  border-top: 3px solid var(--gold);
+  padding: 2rem;
+  margin: 3rem 0;
+}
+
+.fact-box-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 1.25rem;
+  font-weight: 600;
+}
+
+.fact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+}
+
+.fact-item {}
+
+.fact-label {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.62rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  margin-bottom: 0.2rem;
+}
+
+.fact-value {
+  font-family: 'Source Serif 4', serif;
+  font-size: 1rem;
+  color: var(--cream);
+  font-weight: 400;
+}
+
+/* ── VIDEO SECTION ── */
+.video-section {
+  background: var(--near-black);
+  padding: 5rem 2rem;
+  border-top: 1px solid var(--gold-border);
+  border-bottom: 1px solid var(--gold-border);
+}
+
+.video-section-inner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.section-eyebrow {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.75rem;
+}
+
+.section-heading {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 700;
+  color: var(--cream);
+  margin-bottom: 2.5rem;
+  line-height: 1.15;
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.25rem;
+}
+
+.video-card {
+  position: relative;
+}
+
+.video-embed {
+  width: 100%;
+  aspect-ratio: 16/9;
+  border: 0;
+  display: block;
+  background: #000;
+}
+
+.video-label {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.08em;
+  color: var(--text-dim);
+  padding: 0.5rem 0 0;
+}
+
+/* ── PHOTO GALLERY ── */
+.gallery-section {
+  padding: 5rem 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 2.5rem;
+}
+
+.gallery-ph {
+  aspect-ratio: 1;
+}
+
+/* ── CONTACT CARD ── */
+.contact-section {
+  background: var(--card-bg);
+  border-top: 1px solid var(--gold-border);
+  padding: 5rem 2rem;
+}
+
+.contact-inner {
+  max-width: 720px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.contact-col {}
+
+.contact-heading {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--cream);
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.contact-row {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 0.85rem;
+  font-size: 1rem;
+  color: var(--text-mid);
+  align-items: flex-start;
+}
+
+.contact-icon {
+  font-size: 1rem;
+  margin-top: 0.15rem;
+  flex-shrink: 0;
+  width: 1.25rem;
+  text-align: center;
+}
+
+.contact-link {
+  color: var(--gold);
+  text-decoration: none;
+}
+.contact-link:hover { color: var(--gold-light); text-decoration: underline; }
+
+.cta-btn {
+  display: inline-block;
+  background: var(--gold);
+  color: var(--black);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  padding: 0.9rem 2rem;
+  text-decoration: none;
+  margin-top: 1.25rem;
+  transition: background 0.2s, transform 0.15s;
+  border: none;
+  cursor: pointer;
+}
+.cta-btn:hover { background: var(--gold-light); transform: translateY(-1px); }
+
+/* ── FOOTER ── */
+footer {
+  background: var(--black);
+  border-top: 1px solid var(--gold-border);
+  padding: 2.5rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.footer-brand {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--gold);
+}
+
+.footer-copy {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.62rem;
+  letter-spacing: 0.08em;
+  color: var(--text-dim);
+}
+
+/* ── ANIMATIONS ── */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(5px); }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.75s ease, transform 0.75s ease;
+}
+.reveal.visible { opacity: 1; transform: translateY(0); }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 700px) {
+  .masthead-nav { display: none; }
+  .img-block-wide { margin: 2rem 0; }
+  .fact-grid { grid-template-columns: 1fr; }
+  .contact-inner { grid-template-columns: 1fr; }
+  .gallery-grid { grid-template-columns: 1fr 1fr; }
+  .video-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- MASTHEAD -->
+<header class="masthead">
+  <p class="masthead-pub">Bhabi Lal Gold House &nbsp;·&nbsp; Columbus, Ohio</p>
+  <nav>
+    <ul class="masthead-nav">
+      <li><a href="#story">Story</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#videos">Videos</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+  <p class="masthead-date">Columbus, OH &nbsp;·&nbsp; Est. in the heart of the community</p>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-deco" aria-hidden="true">G</div>
+  <div class="hero-inner">
+    <div class="hero-tag">Feature · Craftsmanship &amp; Culture</div>
+    <h1 class="hero-title">
+      The Man Who Brings<br>
+      <span>Nepal's Gold</span><br>
+      to Columbus
+    </h1>
+    <p class="hero-deck">
+      Inside Bhabi Lal Gold House — where generations of Nepali goldsmithing tradition meet the streets of Ohio.
+    </p>
+    <div class="hero-byline">
+      <span>By <strong>Staff Writer</strong></span>
+      <span class="byline-dot"></span>
+      <span>Proprietor <strong>Prince Rasaily</strong></span>
+      <span class="byline-dot"></span>
+      <span>1995 Morse Rd · Columbus, OH</span>
+    </div>
+    <div class="hero-scroll">
+      <span class="hero-line"></span>
+      Read the story
+    </div>
+  </div>
+</section>
+
+<div class="gold-rule"></div>
+
+<!-- ARTICLE -->
+<article class="article" id="story">
+
+  <!-- Lead image placeholder -->
+  <div class="img-block reveal">
+    <div class="img-placeholder" style="aspect-ratio:16/9;">
+      <span class="img-placeholder-icon">📷</span>
+      <p class="img-placeholder-label">
+        <strong>Replace with your hero photo</strong>
+        Use a wide shot of the store front or showcase display from your Facebook page
+      </p>
+    </div>
+    <p class="img-caption">Bhabi Lal Gold House · 1995 Morse Rd, Columbus, OH 43229</p>
+  </div>
+
+  <!-- Opening -->
+  <p class="drop-cap reveal">
+    Walk into South Asian Bazaar on Morse Road on any given afternoon and you'll hear it before you see it — the quiet sound of gold being worked. Tucked inside Columbus's most beloved South Asian marketplace, Bhabi Lal Gold House has become something rare in an era of mass-produced accessories: a genuine goldsmith's atelier, right in the middle of Ohio.
+  </p>
+
+  <p class="reveal">
+    The operation belongs to <strong style="color:var(--gold-light);">Prince Rasaily</strong>, whose family carries decades of Nepali jewelry-making tradition. What started as a destination for Columbus's South Asian community has quietly become one of the most trusted names in 24-karat gold jewelry in the entire state.
+  </p>
+
+  <p class="reveal">
+    "People come to us because they know exactly what they're getting," Rasaily says. "Real gold. Real craft. We don't cut corners."
+  </p>
+
+  <!-- Fact box -->
+  <div class="fact-box reveal">
+    <p class="fact-box-title">At a Glance</p>
+    <div class="fact-grid">
+      <div class="fact-item">
+        <p class="fact-label">Specialty</p>
+        <p class="fact-value">24K Handmade Nepali Gold Jewelry</p>
+      </div>
+      <div class="fact-item">
+        <p class="fact-label">Services</p>
+        <p class="fact-value">Sale · Trade · Repair · Custom Orders</p>
+      </div>
+      <div class="fact-item">
+        <p class="fact-label">Location</p>
+        <p class="fact-value">Inside South Asian Bazaar, 1995 Morse Rd, Columbus OH 43229</p>
+      </div>
+      <div class="fact-item">
+        <p class="fact-label">Shipping</p>
+        <p class="fact-value">Worldwide — all orders shipped</p>
+      </div>
+      <div class="fact-item">
+        <p class="fact-label">Phone</p>
+        <p class="fact-value">(614) 726-0499<br>(716) 715-3536</p>
+      </div>
+      <div class="fact-item">
+        <p class="fact-label">Proprietor</p>
+        <p class="fact-value">Prince Rasaily</p>
+      </div>
+    </div>
+  </div>
+
+  <h2 style="font-family:'Playfair Display',serif; font-size:clamp(1.5rem,3vw,2.1rem); font-weight:700; color:var(--cream); margin:2.5rem 0 1rem; line-height:1.2;" class="reveal">
+    A Craft Carried Across Continents
+  </h2>
+
+  <p class="reveal">
+    Traditional Nepali goldsmithing is a discipline that cannot be rushed. Each piece — from a delicate tilhari necklace to a ceremonial bangle set — is formed by hand, shaped, textured, and finished without the shortcuts that define most modern jewelry retail. At Bhabi Lal Gold House, that tradition is non-negotiable.
+  </p>
+
+  <!-- Image placeholder 2 -->
+  <div class="img-block reveal">
+    <div class="img-placeholder" style="aspect-ratio:4/3;">
+      <span class="img-placeholder-icon">💛</span>
+      <p class="img-placeholder-label">
+        <strong>Replace: Jewelry showcase photo</strong>
+        Necklace or bangle display from your Facebook page
+      </p>
+    </div>
+    <p class="img-caption">Hand-formed 24K gold pieces — each one made to last a lifetime.</p>
+  </div>
+
+  <p class="reveal">
+    The pieces are striking in their weight and warmth. Unlike 14K or 18K gold jewelry common in American jewelry chains, Bhabi Lal specializes in 24-karat — the purest form, the standard for traditional South Asian bridal and ceremonial jewelry. It is gold the way it has always been worn across Nepal and India: bold, meaningful, and built to be passed down.
+  </p>
+
+  <p class="reveal">
+    Silver work is available too. Rasaily and his team can execute virtually any design — whether a customer brings in a reference photo, a family heirloom for repair, or simply a vision.
+  </p>
+
+  <!-- Pull quote -->
+  <blockquote class="pull-quote reveal">
+    <p>"We totally handmake every piece. If you want any type of Nepali or Indian jewelry, let us know — we can do it."</p>
+    <cite>— Prince Rasaily, Proprietor</cite>
+  </blockquote>
+
+  <h2 style="font-family:'Playfair Display',serif; font-size:clamp(1.5rem,3vw,2.1rem); font-weight:700; color:var(--cream); margin:2.5rem 0 1rem; line-height:1.2;" class="reveal">
+    More Than a Store — A Community Landmark
+  </h2>
+
+  <p class="reveal">
+    Columbus has one of the fastest-growing Nepali communities in the Midwest. For many families, Bhabi Lal Gold House is the first call for bridal jewelry, the trusted name for repairs, and the place you go when a piece needs to actually mean something. The store draws customers from across Ohio and beyond — and ships nationally and internationally for those who can't make the trip.
+  </p>
+
+  <!-- Image placeholder 3 -->
+  <div class="img-block reveal">
+    <div class="img-placeholder" style="aspect-ratio:16/9;">
+      <span class="img-placeholder-icon">📷</span>
+      <p class="img-placeholder-label">
+        <strong>Replace: Store interior or team photo</strong>
+        Inside shot from your Facebook page
+      </p>
+    </div>
+    <p class="img-caption">The workshop inside South Asian Bazaar on Columbus's Morse Road.</p>
+  </div>
+
+  <p class="reveal">
+    Rasaily has built his reputation quietly — word of mouth, community trust, and a Facebook presence that shows the work rather than performing it. Videos on their YouTube channel offer an unfiltered look at the craft: gold being shaped, pieces being finished, customers leaving with something they'll wear for the rest of their lives.
+  </p>
+
+  <p class="reveal">
+    Trading is also part of the business. Customers can bring in old gold — whether jewelry that no longer fits, broken pieces, or inherited items — and exchange for new work. It's an arrangement that reflects how gold is treated in South Asian culture: not a disposable accessory, but a living asset.
+  </p>
+
+  <h2 style="font-family:'Playfair Display',serif; font-size:clamp(1.5rem,3vw,2.1rem); font-weight:700; color:var(--cream); margin:2.5rem 0 1rem; line-height:1.2;" class="reveal">
+    What They Make
+  </h2>
+
+  <p class="reveal">
+    The range at Bhabi Lal covers the full spectrum of traditional Nepali and Indian jewelry: tilharis, mangalsutra, churaa, haars, kangan, tops, and custom bridal sets. Repairs cover everything from broken clasps to full restorations. The team also works in silver — rings, earrings, and traditional pieces that call for the lighter metal.
+  </p>
+
+  <p class="reveal">
+    For customers outside Columbus, the process is simple: reach out by phone, describe or send photos of what you need, arrange shipping, and receive the finished piece. Rasaily has customers across the United States and internationally who have never set foot in the store but return for every major jewelry purchase.
+  </p>
+
+  <!-- Final pull quote -->
+  <blockquote class="pull-quote reveal">
+    <p>"In a city still discovering its South Asian roots, Bhabi Lal Gold House is already an institution."</p>
+  </blockquote>
+
+</article>
+
+<!-- PHOTO GALLERY -->
+<section class="gallery-section" id="gallery">
+  <div>
+    <p class="section-eyebrow reveal">From the collection</p>
+    <h2 class="section-heading reveal">The Work</h2>
+  </div>
+  <div class="gallery-grid">
+    <!-- 6 image placeholders for Facebook photos -->
+    <div class="gallery-ph reveal">
+      <div class="img-placeholder" style="height:100%; min-height:200px;">
+        <span class="img-placeholder-icon">📷</span>
+        <p class="img-placeholder-label"><strong>Facebook photo 1</strong></p>
+      </div>
+    </div>
+    <div class="gallery-ph reveal">
+      <div class="img-placeholder" style="height:100%; min-height:200px;">
+        <span class="img-placeholder-icon">📷</span>
+        <p class="img-placeholder-label"><strong>Facebook photo 2</strong></p>
+      </div>
+    </div>
+    <div class="gallery-ph reveal">
+      <div class="img-placeholder" style="height:100%; min-height:200px;">
+        <span class="img-placeholder-icon">📷</span>
+        <p class="img-placeholder-label"><strong>Facebook photo 3</strong></p>
+      </div>
+    </div>
+    <div class="gallery-ph reveal">
+      <div class="img-placeholder" style="height:100%; min-height:200px;">
+        <span class="img-placeholder-icon">📷</span>
+        <p class="img-placeholder-label"><strong>Facebook photo 4</strong></p>
+      </div>
+    </div>
+    <div class="gallery-ph reveal">
+      <div class="img-placeholder" style="height:100%; min-height:200px;">
+        <span class="img-placeholder-icon">📷</span>
+        <p class="img-placeholder-label"><strong>Facebook photo 5</strong></p>
+      </div>
+    </div>
+    <div class="gallery-ph reveal">
+      <div class="img-placeholder" style="height:100%; min-height:200px;">
+        <span class="img-placeholder-icon">📷</span>
+        <p class="img-placeholder-label"><strong>Facebook photo 6</strong></p>
+      </div>
+    </div>
+  </div>
+  <p style="font-family:'Montserrat',sans-serif; font-size:0.68rem; letter-spacing:0.12em; color:var(--text-dim); margin-top:1.5rem; text-align:center; text-transform:uppercase;" class="reveal">
+    → To add images: download from Facebook, then replace each placeholder's &lt;div&gt; with &lt;img src="your-photo.jpg" class="article-img"&gt;
+  </p>
+</section>
+
+<!-- VIDEO SECTION -->
+<section class="video-section" id="videos">
+  <div class="video-section-inner">
+    <p class="section-eyebrow reveal">Watch the craft</p>
+    <h2 class="section-heading reveal">From the Workshop</h2>
+    <div class="video-grid">
+      <div class="video-card reveal">
+        <iframe class="video-embed"
+          src="https://www.youtube.com/embed/9D8rJ6ogba4"
+          title="Bhabi Lal Gold House — Columbus OH"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen loading="lazy">
+        </iframe>
+        <p class="video-label">Store showcase · Columbus, OH 43229</p>
+      </div>
+      <div class="video-card reveal">
+        <iframe class="video-embed"
+          src="https://www.youtube.com/embed/78U_ibHwDXw"
+          title="Bhabi Lal Gold House"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen loading="lazy">
+        </iframe>
+        <p class="video-label">Jewelry collection · Ships nationwide</p>
+      </div>
+      <div class="video-card reveal">
+        <iframe class="video-embed"
+          src="https://www.youtube.com/embed/3I0RDmxKW0Y"
+          title="Bhabi Lal Gold House Ad"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen loading="lazy">
+        </iframe>
+        <p class="video-label">Ft. Puru Bhandari &amp; Bhima</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact-section" id="contact">
+  <div class="contact-inner">
+    <div class="contact-col">
+      <h2 class="contact-heading reveal">Visit or Order</h2>
+      <div class="contact-row reveal">
+        <span class="contact-icon">📍</span>
+        <span>1995 Morse Rd, Columbus, OH 43229<br>
+        <small style="color:var(--text-dim);">Inside South Asian Bazaar</small></span>
+      </div>
+      <div class="contact-row reveal">
+        <span class="contact-icon">📞</span>
+        <div>
+          <a class="contact-link" href="tel:+16147260499">(614) 726-0499</a><br>
+          <a class="contact-link" href="tel:+17167153536">(716) 715-3536</a>
+        </div>
+      </div>
+      <div class="contact-row reveal">
+        <span class="contact-icon">🌐</span>
+        <a class="contact-link" href="https://www.youtube.com/@bhabilalgoldhouse3390" target="_blank">YouTube Channel →</a>
+      </div>
+      <div class="contact-row reveal">
+        <span class="contact-icon">✉️</span>
+        <span style="color:var(--text-dim);">Proprietor: Prince Rasaily</span>
+      </div>
+      <a class="cta-btn reveal" href="tel:+16147260499">Call to Order</a>
+    </div>
+    <div class="contact-col reveal">
+      <iframe
+        src="https://maps.google.com/maps?q=1995+Morse+Rd+Columbus+OH+43229&output=embed"
+        width="100%" height="280" style="border:0; display:block; filter:grayscale(100%) invert(85%) contrast(90%);"
+        allowfullscreen loading="lazy"
+        title="Bhabi Lal Gold House location">
+      </iframe>
+      <p style="font-family:'Montserrat',sans-serif; font-size:0.62rem; letter-spacing:0.08em; color:var(--text-dim); margin-top:0.5rem;">
+        Free parking · Off I-71 Exit 116 · East on Morse Rd 1.5 mi
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p class="footer-brand">Bhabi Lal Gold House</p>
+  <p class="footer-copy">1995 Morse Rd · Columbus, OH 43229 · (614) 726-0499 · Prince Rasaily, Proprietor</p>
+  <p class="footer-copy">Handmade 24K Gold · Repair · Trade · Ships Worldwide</p>
+</footer>
+
+<script>
+const obs = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }
+  });
+}, { threshold: 0.1 });
+document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+</script>
+</body>
+</html>
